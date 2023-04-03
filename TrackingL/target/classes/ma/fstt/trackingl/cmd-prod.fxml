@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="cmd" prefHeight="550.0" prefWidth="650.0" spacing="15.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.CmdProdController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+               <children>
+      <AnchorPane>
+         <children>
+             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="-2.0" text="Ajouter des produits aux commandes" textAlignment="CENTER" underline="true">
+                 <font>
+                     <Font name="System Bold" size="22.0" />
+                 </font>
+             </Label>
+            <Button layoutX="7.0" layoutY="2.0" mnemonicParsing="false" onAction="#switchToHome" text="⮌" textAlignment="CENTER">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="30.0" layoutY="221.0" text="Commandes :" underline="true" />
+      <HBox>
+         <children>
+            <ComboBox fx:id="commandes" prefHeight="25.0" prefWidth="469.0">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </ComboBox>
+            <Button fx:id="btnLoad" mnemonicParsing="false" onAction="#onLoadButtonClick" prefHeight="25.0" prefWidth="137.0" text="Voir les commandes">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Label text="Produits :" underline="true" />
+       <Label text="Nom :">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Label>
+      <TextField fx:id="nom" prefHeight="25.0" prefWidth="480.5">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </TextField>
+      <VBox spacing="15.0" />
+      <HBox layoutX="30.0" layoutY="77.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox spacing="15.0">
+               <children>
+                  <Label text="Prix (DH) :" />
+                  <TextField fx:id="prix" prefHeight="25.0" prefWidth="480.5">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox spacing="15.0">
+               <children>
+                  <Label text="Quantité :">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="quant" prefHeight="25.0" prefWidth="480.5">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <Label text="Description :" />
+      <TextField fx:id="desc" />
+      <HBox prefWidth="200.0">
+         <children>
+            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#onSaveButtonClick" text="Save" />
+            <Button fx:id="btnClear" layoutX="106.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClearButtonClick" text="Clear" />
+         </children>
+      </HBox>
+      <TableView fx:id="mytable" onMouseClicked="#getData" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="47.0" text="Id" />
+          <TableColumn fx:id="col_nom" prefWidth="202.0" text="Nom" />
+          <TableColumn fx:id="col_prix" prefWidth="128.0" text="Prix" />
+          <TableColumn fx:id="col_desc" prefWidth="232.0" text="Description" />
+        </columns>
+      </TableView>
+   </children>
+
+            </VBox>

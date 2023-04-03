@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.HelloController">
+  <children>
+      <AnchorPane fx:id="root" maxHeight="-1.0" maxWidth="-1.0" prefHeight="500.0" prefWidth="650.0">
+      <children>
+        <Label alignment="CENTER" layoutX="170.0" layoutY="32.0" style="&#10;" text="Tracking des livreurs" textAlignment="CENTER" underline="true" wrapText="false">
+          <font>
+            <Font name="System Bold" size="30.0" />
+          </font>
+        </Label>
+            <ImageView fitHeight="316.0" fitWidth="343.0" layoutX="303.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@hello.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="53.0" layoutY="118.0" mnemonicParsing="false" onAction="#switchToLivreur" prefHeight="52.0" prefWidth="215.0" text="Gestion des livreurs">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="53.0" layoutY="182.0" mnemonicParsing="false" onAction="#switchToProduit" prefHeight="52.0" prefWidth="215.0" text="Gestion des produits">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="53.0" layoutY="245.0" mnemonicParsing="false" onAction="#switchToCommande" prefHeight="52.0" prefWidth="215.0" text="Gestion des commandes">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="logout" layoutX="85.0" layoutY="404.0" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="25.0" prefWidth="151.0" text="Se déconnecter">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="53.0" layoutY="309.0" mnemonicParsing="false" onAction="#switchToCmdProd" prefHeight="52.0" prefWidth="215.0" text="Produits - Commandes">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+      </children>
+      </AnchorPane>
+  </children>
+</VBox>
